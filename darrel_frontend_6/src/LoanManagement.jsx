@@ -1,0 +1,73 @@
+import { useState } from 'react';
+
+export default function LoanManagement({ onBack, onLoanBook }) {
+    const [loanData, setLoanData] = useState({
+        bookTitle: '',
+        borrowerName: '',
+        loanWeeks: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setLoanData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (onLoanBook) {
+            onLoanBook(loanData);
+        }
+        setLoanData({
+            bookTitle: '',
+            borrowerName: '',
+            loanWeeks: ''
+        });
+    };
+
+    return (
+        <div className="loan-management">
+            <h1>Book Loan Management</h1>
+            <form onSubmit={handleSubmit} className="loan-form">
+                <div className="form-group">
+                    <label htmlFor="bookTitle">Book Title:</label>
+                    <input
+                        type="text"
+                        id="bookTitle"
+                        name="bookTitle"
+                        value={loanData.bookTitle}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="borrowerName">Borrower Name:</label>
+                    <input
+                        type="text"
+                        id="borrowerName"
+                        name="borrowerName"
+                        value={loanData.borrowerName}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="loanWeeks">Loan Duration (weeks):</label>
+                    <input
+                        type="number"
+                        id="loanWeeks"
+                        name="loanWeeks"
+                        value={loanData.loanWeeks}
+                        onChange={handleChange}
+                        required
+                        min="1"
+                    />
+                </div>
+                <button type="submit" className="submit-button">Submit Loan</button>
+            </form>
+            <button onClick={onBack} className="back-button">Back to Main</button>
+        </div>
+    );
+}

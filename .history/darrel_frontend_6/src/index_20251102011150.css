@@ -1,0 +1,236 @@
+.header {
+  color: darkcyan;
+  font-size: 1.5em;
+  font-family: tahoma, sans-serif;
+  padding: 1em;
+  margin-bottom: 2.5em;
+  text-align: center;
+  background: lightcyan;
+  border-bottom: darkcyan 6px solid;
+}
+
+.addbutton {
+  font-family: tahoma, sans-serif;
+  font-size: 1.5em;
+  width: 220px;
+  height: 350px;
+  min-width: 220px;
+  min-height: 350px;
+  max-width: 220px;
+  max-height: 350px;
+  box-sizing: border-box;
+  padding: 1em;
+  border: 2px solid darkcyan;
+  border-radius: 5px;
+  color: darkcyan;
+  font-weight: bold;
+  background-color: lightcyan;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-left: 94px;
+  margin-right: 40px;
+}
+
+.main-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 54px; 
+}
+
+.addbutton:hover {
+  background-color: darkcyan;
+  color: white;
+  border-color: lightcyan;
+}
+
+.add-button-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.book {
+  position: relative;
+  border: 2px solid darkcyan;
+  width: 200px;
+  height: 315px;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: lightcyan;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.book-selected {
+  background-color: darkcyan;
+}
+
+.book-image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.book-list {
+  display: flex;
+  gap: 5em;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: tahoma, sans-serif;
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  max-width: 250px;
+  color: darkcyan;
+}
+
+.filter {
+  font-family: tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 2px solid darkcyan;
+  width: 200px;
+  color: darkcyan;
+  background-color: lightcyan;
+  cursor: pointer;
+  margin-left: 94px;
+  margin-right: 40px;
+}
+
+.filter-title {
+  font-family: tahoma, sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  color: darkcyan;
+}
+
+.loan-button {
+  padding: 9px 10px;
+  background: darkcyan;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  font-family: tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.delete {
+  padding: 9px 10px;
+  background: #b2395b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  font-family: tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.edit {
+  bottom: 10;
+  right: 1;
+  padding: 9px 10px;
+  border: none;
+  background: #397ab2;
+  color: #fff;
+  cursor: pointer;
+  font-family: tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-top: 18px;
+  margin-left: 140px;
+}
+
+.author {
+  font-family: tahoma, sans-serif;
+  font-size: 1em;
+  margin-top: 0.1em;
+  max-width: 250px;
+  color: darkcyan;
+}
+
+.price {
+  font-family: tahoma, sans-serif;
+  font-size: 1em;
+  margin-top: 0.1em;
+  max-width: 250px;
+  color: darkcyan;
+  font-weight: bold;
+}
+
+.url {
+  font-family: tahoma, sans-serif;
+  font-size: 1em;
+  margin-top: 0.5em;
+  color: rgb(87, 119, 236);
+  text-decoration: underline;
+}
+
+.footer {
+  color: darkcyan;
+  font-size: 1.2em;
+  font-family: tahoma, sans-serif;
+  padding: 1em;
+  margin-top: 9.5em;
+  text-align: center;
+  background-color: lightcyan;
+  border-top: darkcyan 6px solid;
+  align-self: flex-end;
+}
+
+
+.modal {
+  font-family: tahoma, sans-serif;
+  border: 2px solid darkcyan;
+  border-radius: 5px;
+  background-color: lightcyan;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  width: 400px;
+  max-width: 90%;
+}
+
+.category {
+  font-family: tahoma, sans-serif;
+  font-size: 1em;
+  color: darkcyan;
+  margin-top: 0.1em;
+  align-items: center;
+  display: flex;
+  vertical-align: auto;
+}
+
+.submit-button {
+  font-family: tahoma, sans-serif;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: darkcyan;
+  color: white;
+  cursor: pointer;
+  margin-top: 2em;
+}
+
+.input {
+  width: 50%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-left: auto;
+}

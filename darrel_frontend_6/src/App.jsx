@@ -137,6 +137,7 @@ function App() {
               price={book.price}
               image={book.image}
               url={book.url}
+              status={book.status}
               selected={selectedBook === book.id}
               onSelect={() => handleSelectBook(book.id)}
             />

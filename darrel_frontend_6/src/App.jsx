@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Book from './Book.jsx';
 import Modal from './Modal.jsx';
-import BookDetails from './BookDetails.jsx';
 import LoanManagement from './LoanManagement.jsx';
 
 function App() {
@@ -89,9 +88,11 @@ function App() {
   const categories = [...new Set(books.map(book => book.author))];
 
   if (currentPage === 'loan') {
+    const loanedBooks = books.filter(book => book.status === 'on loan');
+    const availableBooks = books.filter(book => book.status === 'available');
     return (
       <div className="App">
-        <LoanManagement onBack={() => setCurrentPage('main')} onLoanBook={handleLoanBook} />
+        <LoanManagement onBack={() => setCurrentPage('main')} onLoanBook={handleLoanBook} loanedBooks={loanedBooks} availableBooks={availableBooks} />
       </div>
     );
   }
